@@ -1,5 +1,5 @@
 <?php
- $this -> need('header.php');
+$this->need('header.php');
  ?>
 
     <div id="arts">

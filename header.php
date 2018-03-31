@@ -36,7 +36,7 @@
 	<?php $this->header(); ?>
 </head>
 <body>
-	<div id="welcome" style="height:<?php if ($this->is('post') or $this->is('page')) : ?>60vh<?php elseif($this->is('index')): ?>100vh<?php endif; ?>">
+	<div id="welcome" style="height:<?php if ($this->is('post') or $this->is('page')or $this->is('archive')) : ?>60vh<?php elseif($this->is('index')): ?>100vh<?php endif; ?>">
 		<?php if ($this->options->enablecover == 1): ?>
 			<?php if ($this->is('post')) : ?>
 				 <div class="background-img" style="background-image: url(<?php if (isset($this->fields->imgurl)): ?><?php $this->fields->imgurl(); ?><?php else: ?>https://i.loli.net/2017/12/08/5a2a873456a50.jpg<?php endif; ?>);"><div class="bk-mask"></div></div>
@@ -45,6 +45,9 @@
 				 <div class="background-img" style="background-image: url(<?php if (isset($this->fields->imgurl)): ?><?php $this->fields->imgurl(); ?><?php else: ?>https://i.loli.net/2017/12/08/5a2a873456a50.jpg<?php endif; ?>);"><div class="bk-mask"></div></div>
 		 <?php endif; ?>
 		 <?php if ($this->is('index')) : ?>
+				 <div class="background-img" style="background-image: url(https://i.loli.net/2017/12/08/5a2a873456a50.jpg);"></div>
+		 <?php endif; ?>
+		 <?php if ($this->is('archive')) : ?>
 				 <div class="background-img" style="background-image: url(https://i.loli.net/2017/12/08/5a2a873456a50.jpg);"></div>
 		 <?php endif; ?>
     <?php endif; ?>
